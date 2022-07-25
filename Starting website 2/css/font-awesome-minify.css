@@ -2,18 +2,26 @@
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+.fa,
+.fa-stack {
+    display: inline-block
+}
+
+.fa-fw,
+.fa-li {
+    text-align: center
+}
 
 @font-face {
-    font-family: 'FontAwesome';
+    font-family: FontAwesome;
     src: url('../fonts/fontawesome-webfont.eot');
     src: url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg') format('svg');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
 .fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
+    font: 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -26,7 +34,8 @@
     vertical-align: -15%
 }
 
-.fa-2x {
+.fa-2x,
+.fa-stack-2x {
     font-size: 2em
 }
 
@@ -43,8 +52,7 @@
 }
 
 .fa-fw {
-    width: 1.28571429em;
-    text-align: center
+    width: 1.28571429em
 }
 
 .fa-ul {
@@ -61,8 +69,7 @@
     position: absolute;
     left: -2.14285714em;
     width: 2.14285714em;
-    top: .14285714em;
-    text-align: center
+    top: .14285714em
 }
 
 .fa-li.fa-lg {
@@ -71,57 +78,46 @@
 
 .fa-border {
     padding: .2em .25em .15em;
-    border: solid .08em #eee;
+    border: .08em solid #eee;
     border-radius: .1em
 }
 
-.fa-pull-left {
-    float: left
-}
-
-.fa-pull-right {
-    float: right
-}
-
-.fa.fa-pull-left {
-    margin-right: .3em
-}
-
-.fa.fa-pull-right {
-    margin-left: .3em
-}
-
-.pull-right {
-    float: right
-}
-
+.fa-pull-left,
 .pull-left {
     float: left
 }
 
+.fa-pull-right,
+.pull-right {
+    float: right
+}
+
+.fa.fa-pull-left,
 .fa.pull-left {
     margin-right: .3em
 }
 
+.fa.fa-pull-right,
 .fa.pull-right {
     margin-left: .3em
 }
 
 .fa-spin {
-    -webkit-animation: fa-spin 2s infinite linear;
-    animation: fa-spin 2s infinite linear
+    -webkit-animation: 2s linear infinite fa-spin;
+    animation: 2s linear infinite fa-spin
 }
 
 .fa-pulse {
-    -webkit-animation: fa-spin 1s infinite steps(8);
-    animation: fa-spin 1s infinite steps(8)
+    -webkit-animation: 1s steps(8) infinite fa-spin;
+    animation: 1s steps(8) infinite fa-spin
 }
 
 @-webkit-keyframes fa-spin {
     0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
     }
+
     100% {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
@@ -130,9 +126,10 @@
 
 @keyframes fa-spin {
     0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
     }
+
     100% {
         -webkit-transform: rotate(359deg);
         transform: rotate(359deg)
@@ -140,51 +137,45 @@
 }
 
 .fa-rotate-90 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
 .fa-rotate-180 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg)
 }
 
 .fa-rotate-270 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
     -webkit-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     transform: rotate(270deg)
 }
 
 .fa-flip-horizontal {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
     -webkit-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1)
 }
 
 .fa-flip-vertical {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
     -webkit-transform: scale(1, -1);
     -ms-transform: scale(1, -1);
     transform: scale(1, -1)
 }
 
-:root .fa-rotate-90,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical,
 :root .fa-rotate-180,
 :root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
+:root .fa-rotate-90 {
     filter: none
 }
 
 .fa-stack {
     position: relative;
-    display: inline-block;
     width: 2em;
     height: 2em;
     line-height: 2em;
@@ -201,10 +192,6 @@
 
 .fa-stack-1x {
     line-height: inherit
-}
-
-.fa-stack-2x {
-    font-size: 2em
 }
 
 .fa-inverse {
@@ -263,8 +250,8 @@
     content: "\f00c"
 }
 
-.fa-remove:before,
 .fa-close:before,
+.fa-remove:before,
 .fa-times:before {
     content: "\f00d"
 }
@@ -285,8 +272,8 @@
     content: "\f012"
 }
 
-.fa-gear:before,
-.fa-cog:before {
+.fa-cog:before,
+.fa-gear:before {
     content: "\f013"
 }
 
@@ -330,8 +317,8 @@
     content: "\f01d"
 }
 
-.fa-rotate-right:before,
-.fa-repeat:before {
+.fa-repeat:before,
+.fa-rotate-right:before {
     content: "\f01e"
 }
 
@@ -452,8 +439,8 @@
     content: "\f03d"
 }
 
-.fa-photo:before,
 .fa-image:before,
+.fa-photo:before,
 .fa-picture-o:before {
     content: "\f03e"
 }
@@ -644,8 +631,8 @@
     content: "\f070"
 }
 
-.fa-warning:before,
-.fa-exclamation-triangle:before {
+.fa-exclamation-triangle:before,
+.fa-warning:before {
     content: "\f071"
 }
 
@@ -722,8 +709,8 @@
     content: "\f084"
 }
 
-.fa-gears:before,
-.fa-cogs:before {
+.fa-cogs:before,
+.fa-gears:before {
     content: "\f085"
 }
 
@@ -929,8 +916,8 @@
     content: "\f0c6"
 }
 
-.fa-save:before,
-.fa-floppy-o:before {
+.fa-floppy-o:before,
+.fa-save:before {
     content: "\f0c7"
 }
 
@@ -938,9 +925,9 @@
     content: "\f0c8"
 }
 
+.fa-bars:before,
 .fa-navicon:before,
-.fa-reorder:before,
-.fa-bars:before {
+.fa-reorder:before {
     content: "\f0c9"
 }
 
@@ -1012,18 +999,18 @@
     content: "\f0db"
 }
 
-.fa-unsorted:before,
-.fa-sort:before {
+.fa-sort:before,
+.fa-unsorted:before {
     content: "\f0dc"
 }
 
-.fa-sort-down:before,
-.fa-sort-desc:before {
+.fa-sort-desc:before,
+.fa-sort-down:before {
     content: "\f0dd"
 }
 
-.fa-sort-up:before,
-.fa-sort-asc:before {
+.fa-sort-asc:before,
+.fa-sort-up:before {
     content: "\f0de"
 }
 
@@ -1040,8 +1027,8 @@
     content: "\f0e2"
 }
 
-.fa-legal:before,
-.fa-gavel:before {
+.fa-gavel:before,
+.fa-legal:before {
     content: "\f0e3"
 }
 
@@ -1058,8 +1045,8 @@
     content: "\f0e6"
 }
 
-.fa-flash:before,
-.fa-bolt:before {
+.fa-bolt:before,
+.fa-flash:before {
     content: "\f0e7"
 }
 
@@ -1071,8 +1058,8 @@
     content: "\f0e9"
 }
 
-.fa-paste:before,
-.fa-clipboard:before {
+.fa-clipboard:before,
+.fa-paste:before {
     content: "\f0ea"
 }
 
@@ -1297,8 +1284,8 @@
     content: "\f126"
 }
 
-.fa-unlink:before,
-.fa-chain-broken:before {
+.fa-chain-broken:before,
+.fa-unlink:before {
     content: "\f127"
 }
 
@@ -1450,23 +1437,23 @@
     content: "\f14e"
 }
 
-.fa-toggle-down:before,
-.fa-caret-square-o-down:before {
+.fa-caret-square-o-down:before,
+.fa-toggle-down:before {
     content: "\f150"
 }
 
-.fa-toggle-up:before,
-.fa-caret-square-o-up:before {
+.fa-caret-square-o-up:before,
+.fa-toggle-up:before {
     content: "\f151"
 }
 
-.fa-toggle-right:before,
-.fa-caret-square-o-right:before {
+.fa-caret-square-o-right:before,
+.fa-toggle-right:before {
     content: "\f152"
 }
 
-.fa-euro:before,
-.fa-eur:before {
+.fa-eur:before,
+.fa-euro:before {
     content: "\f153"
 }
 
@@ -1479,26 +1466,26 @@
     content: "\f155"
 }
 
-.fa-rupee:before,
-.fa-inr:before {
+.fa-inr:before,
+.fa-rupee:before {
     content: "\f156"
 }
 
 .fa-cny:before,
+.fa-jpy:before,
 .fa-rmb:before,
-.fa-yen:before,
-.fa-jpy:before {
+.fa-yen:before {
     content: "\f157"
 }
 
-.fa-ruble:before,
 .fa-rouble:before,
-.fa-rub:before {
+.fa-rub:before,
+.fa-ruble:before {
     content: "\f158"
 }
 
-.fa-won:before,
-.fa-krw:before {
+.fa-krw:before,
+.fa-won:before {
     content: "\f159"
 }
 
@@ -1708,8 +1695,8 @@
     content: "\f190"
 }
 
-.fa-toggle-left:before,
-.fa-caret-square-o-left:before {
+.fa-caret-square-o-left:before,
+.fa-toggle-left:before {
     content: "\f191"
 }
 
@@ -1725,8 +1712,8 @@
     content: "\f194"
 }
 
-.fa-turkish-lira:before,
-.fa-try:before {
+.fa-try:before,
+.fa-turkish-lira:before {
     content: "\f195"
 }
 
@@ -1754,14 +1741,14 @@
     content: "\f19b"
 }
 
-.fa-institution:before,
 .fa-bank:before,
+.fa-institution:before,
 .fa-university:before {
     content: "\f19c"
 }
 
-.fa-mortar-board:before,
-.fa-graduation-cap:before {
+.fa-graduation-cap:before,
+.fa-mortar-board:before {
     content: "\f19d"
 }
 
@@ -1911,19 +1898,19 @@
     content: "\f1c4"
 }
 
+.fa-file-image-o:before,
 .fa-file-photo-o:before,
-.fa-file-picture-o:before,
-.fa-file-image-o:before {
+.fa-file-picture-o:before {
     content: "\f1c5"
 }
 
-.fa-file-zip-o:before,
-.fa-file-archive-o:before {
+.fa-file-archive-o:before,
+.fa-file-zip-o:before {
     content: "\f1c6"
 }
 
-.fa-file-sound-o:before,
-.fa-file-audio-o:before {
+.fa-file-audio-o:before,
+.fa-file-sound-o:before {
     content: "\f1c7"
 }
 
@@ -1950,9 +1937,9 @@
 
 .fa-life-bouy:before,
 .fa-life-buoy:before,
+.fa-life-ring:before,
 .fa-life-saver:before,
-.fa-support:before,
-.fa-life-ring:before {
+.fa-support:before {
     content: "\f1cd"
 }
 
@@ -1961,13 +1948,13 @@
 }
 
 .fa-ra:before,
-.fa-resistance:before,
-.fa-rebel:before {
+.fa-rebel:before,
+.fa-resistance:before {
     content: "\f1d0"
 }
 
-.fa-ge:before,
-.fa-empire:before {
+.fa-empire:before,
+.fa-ge:before {
     content: "\f1d1"
 }
 
@@ -1979,9 +1966,9 @@
     content: "\f1d3"
 }
 
+.fa-hacker-news:before,
 .fa-y-combinator-square:before,
-.fa-yc-square:before,
-.fa-hacker-news:before {
+.fa-yc-square:before {
     content: "\f1d4"
 }
 
@@ -1998,13 +1985,13 @@
     content: "\f1d7"
 }
 
-.fa-send:before,
-.fa-paper-plane:before {
+.fa-paper-plane:before,
+.fa-send:before {
     content: "\f1d8"
 }
 
-.fa-send-o:before,
-.fa-paper-plane-o:before {
+.fa-paper-plane-o:before,
+.fa-send-o:before {
     content: "\f1d9"
 }
 
@@ -2040,8 +2027,8 @@
     content: "\f1e2"
 }
 
-.fa-soccer-ball-o:before,
-.fa-futbol-o:before {
+.fa-futbol-o:before,
+.fa-soccer-ball-o:before {
     content: "\f1e3"
 }
 
@@ -2193,9 +2180,9 @@
     content: "\f20a"
 }
 
+.fa-ils:before,
 .fa-shekel:before,
-.fa-sheqel:before,
-.fa-ils:before {
+.fa-sheqel:before {
     content: "\f20b"
 }
 
@@ -2348,8 +2335,8 @@
     content: "\f235"
 }
 
-.fa-hotel:before,
-.fa-bed:before {
+.fa-bed:before,
+.fa-hotel:before {
     content: "\f236"
 }
 
@@ -2369,8 +2356,8 @@
     content: "\f23a"
 }
 
-.fa-yc:before,
-.fa-y-combinator:before {
+.fa-y-combinator:before,
+.fa-yc:before {
     content: "\f23b"
 }
 
@@ -2387,8 +2374,8 @@
 }
 
 .fa-battery-4:before,
-.fa-battery:before,
-.fa-battery-full:before {
+.fa-battery-full:before,
+.fa-battery:before {
     content: "\f240"
 }
 
@@ -2480,8 +2467,8 @@
     content: "\f255"
 }
 
-.fa-hand-stop-o:before,
-.fa-hand-paper-o:before {
+.fa-hand-paper-o:before,
+.fa-hand-stop-o:before {
     content: "\f256"
 }
 
@@ -2565,8 +2552,8 @@
     content: "\f26b"
 }
 
-.fa-tv:before,
-.fa-television:before {
+.fa-television:before,
+.fa-tv:before {
     content: "\f26c"
 }
 
@@ -2770,14 +2757,14 @@
     content: "\f2a2"
 }
 
-.fa-asl-interpreting:before,
-.fa-american-sign-language-interpreting:before {
+.fa-american-sign-language-interpreting:before,
+.fa-asl-interpreting:before {
     content: "\f2a3"
 }
 
+.fa-deaf:before,
 .fa-deafness:before,
-.fa-hard-of-hearing:before,
-.fa-deaf:before {
+.fa-hard-of-hearing:before {
     content: "\f2a4"
 }
 
@@ -2789,8 +2776,8 @@
     content: "\f2a6"
 }
 
-.fa-signing:before,
-.fa-sign-language:before {
+.fa-sign-language:before,
+.fa-signing:before {
     content: "\f2a7"
 }
 
@@ -2868,13 +2855,13 @@
     content: "\f2ba"
 }
 
-.fa-vcard:before,
-.fa-address-card:before {
+.fa-address-card:before,
+.fa-vcard:before {
     content: "\f2bb"
 }
 
-.fa-vcard-o:before,
-.fa-address-card-o:before {
+.fa-address-card-o:before,
+.fa-vcard-o:before {
     content: "\f2bc"
 }
 
@@ -2917,8 +2904,8 @@
 }
 
 .fa-thermometer-4:before,
-.fa-thermometer:before,
-.fa-thermometer-full:before {
+.fa-thermometer-full:before,
+.fa-thermometer:before {
     content: "\f2c7"
 }
 
@@ -2946,9 +2933,9 @@
     content: "\f2cc"
 }
 
+.fa-bath:before,
 .fa-bathtub:before,
-.fa-s15:before,
-.fa-bath:before {
+.fa-s15:before {
     content: "\f2cd"
 }
 
