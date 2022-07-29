@@ -656,11 +656,12 @@ h3,
 h4,
 p,
 label,
+address,
 .btn,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757 !important;
+    color: black !important;
 }
 
 .container {
