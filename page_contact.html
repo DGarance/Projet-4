@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstraps-minify.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/style-minify.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome-minify.min.css">
-	
+
 
 
 	<script defer src="./js/jquery-2.1.0-minify.js"></script>
@@ -87,7 +87,9 @@
 				<div class="container bloc-lg">
 					<div class="row">
 						<div class="col-sm-6">
-							<form id="form_1" action="./includes/form_1.php">
+							<form id="form_1" action="./includes/form_1.php" novalidate
+								data-success-msg="Your message has been sent."
+								data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
 								<div class="form-group">
 									<label>
 										Nom
@@ -182,8 +184,8 @@
 
 			</footer>
 
-		</>
-		<!-- Principal conteneur END -->
+		</div>
+			<!-- Principal conteneur END -->
 	</main>
 </body>
 
