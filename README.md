@@ -49,6 +49,6 @@ Je suis fière du résultat obtenu avec ce projet, et je suis désormais en mesu
 ## Liens
 
 - [Lien vers le repository GitHub](https://github.com/DGarance/Projet-4)
-- [Lien vers la version initiale en ligne du site Internet](https://dgarance.github.io/Projet-4/)
+- [Lien vers la version initiale en ligne du site Internet](https://dgarance.github.io/La-Panth-re-site-initial/)
 - [Lien vers la version optimisée en ligne du site Internet](https://dgarance.github.io/Projet-4/)
 
