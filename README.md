@@ -1,5 +1,5 @@
 # Projet n°4 | Parcours Développeur Web | OpenClassrooms 
-## Projet Optimisez un site web existant :rocket:
+## La Panthère | Optimisez un site web existant :rocket:
 
 ## Contexte
 
