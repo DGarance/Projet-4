@@ -1,14 +1,15 @@
-# Projet Optimisez un site web existant :rocket:
+# Projet n°4 | Parcours Développeur Web | OpenClassrooms 
+## Projet Optimisez un site web existant :rocket:
+
+## Contexte
+
+Ce projet a été réalisé dans le cadre de ma formation de développeuse web chez OpenClassrooms. L'objectif était d'optimiser le référencement, l'accessibilité, la taille et la vitesse du site web de l'agence La Panthère.
 
 ## Résumé du scénario
 
 Vous travaillez pour l'agence La Panthère, une grande agence de web design basée à Lyon. L'activité de l'entreprise a bien démarré, mais elle est actuellement en perte de vitesse en raison de la concurrence. La fondatrice de l’entreprise, Sophie, a identifié le besoin d'améliorer le référencement du site de l'agence pour gagner en visibilité sur les moteurs de recherche. Elle vous a confié cette mission car vous êtes un spécialiste en référencement.
 
 Sophie vous a demandé de réaliser une analyse de l'état actuel du SEO du site, d'identifier les parties non optimisées en termes de référencement et d'accessibilité, et de proposer au moins 10 recommandations pour améliorer le site. Vous devrez également optimiser le site en appliquant ces recommandations au contenu et au code source. De plus, vous devrez accélérer la vitesse de chargement du site et démontrer les améliorations obtenues grâce à des captures d'écran comparatives.
-
-## Contexte
-
-Ce projet a été réalisé dans le cadre de ma formation de développeuse web chez OpenClassrooms. L'objectif était d'optimiser le référencement, l'accessibilité, la taille et la vitesse du site web de l'agence La Panthère.
 
 ## Contenu du projet
 
